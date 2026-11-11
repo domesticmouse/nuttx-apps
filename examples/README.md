@@ -1,0 +1,246 @@
+# examples
+
+## Overview
+NuttX example applications and demonstration suites (`apps/examples`), providing user-space reference implementations for device drivers, networking protocols, filesystems, graphics, IPC, and language runtimes.
+
+## Subdirectories & Boundaries
+- **abntcodi**: [`./abntcodi/README.md`](./abntcodi/README.md) - ABNT CODI example (`abntcodi`). Enable the ABNT CODI test example
+- **adc**: [`./adc/README.md`](./adc/README.md) - ADC example (`adc`). Enable the ADC example
+- **adjtime**: [`./adjtime/README.md`](./adjtime/README.md) - Ajdtime function example (`adjtime`). Enable the adjtime example. This application demonstrates the usage of adjtime() interface used to synchronize system clock time if its value varies from real time (usually get by external RTC).
+- **ads7046**: [`./ads7046/README.md`](./ads7046/README.md) - ADS7046 ADC example (`ads7046`). Enable the ADS7046 example
+- **adxl372_test**: [`./adxl372_test/README.md`](./adxl372_test/README.md) - ADXL372 test program (`adxl372_test`). Enable the ADXL372 sensor SPI test program.
+- **ajoystick**: [`./ajoystick/README.md`](./ajoystick/README.md) - Analog joystick example (`ajoystick`). Enable the analog joystick example
+- **alarm**: [`./alarm/README.md`](./alarm/README.md) - RTC alarm driver example (`alarm`). Enable the RTC driver alarm test
+- **amg88xx**: [`./amg88xx/README.md`](./amg88xx/README.md) - AMG88xx sensor example (`amg88xx`). Enable the AMG88xx sensor example
+- **apa102**: [`./apa102/README.md`](./apa102/README.md) - APA102 LED Strip example (`apa102`). Enable the APA102 example
+- **apds9960**: [`./apds9960/README.md`](./apds9960/README.md) - APDS-9960 Test Application (`apds9960`). Enable the APDS-9960 test application.
+- **audio_rttl**: [`./audio_rttl/README.md`](./audio_rttl/README.md) - Audio tone generator example (RTTL player) (`audio_rttl`). Enable the audio RTTL player example.
+- **baromonitor**: [`./baromonitor/README.md`](./baromonitor/README.md) - Barometer monitoring dashboard example (`baromonitor`). Enable the barometer monitoring dashboard.
+- **bastest**: [`./bastest/README.md`](./bastest/README.md) - Setup Test Files for BAS (`bastest`). Mount the ROMFS file system containing the BAS test files at /mnt/romfs.  This selection depends both on INTERPRETER_BAS to provide the BASIC interpreter and and upon FS_ROMFS to provide support for the ROMFS file system.
+- **battery**: [`./battery/README.md`](./battery/README.md) - Battery monitor example (`battery`). Enable the battery monitor example
+- **ble**: [`./ble/README.md`](./ble/README.md) - BLE sensor reading example (`ble`). Enable the BLE example
+- **bme680**: [`./bme680/README.md`](./bme680/README.md) - BME680 sensor example (`bme680`). Enable the BME680 example
+- **bmi160**: [`./bmi160/README.md`](./bmi160/README.md) - BMI160 sensor example (`bmi160`). Enable the 6 axis sensor example
+- **bmp180**: [`./bmp180/README.md`](./bmp180/README.md) - BMP180 Barometer sensor example (`bmp180`). Enable the BMP180 example
+- **bmp280**: [`./bmp280/README.md`](./bmp280/README.md) - BMP280 Barometer sensor example (`bmp280`). Enable the BMP280 example
+- **bridge**: [`./bridge/README.md`](./bridge/README.md) - UDP bridge example (`bridge`). Simple test of a system with multiple networks.  It simply echoes all UDP packets received on network 1 and network 2 to network 2 and network 1, respectively.  Interface 1 and interface may or may not lie on the same network.
+- **buttons**: [`./buttons/README.md`](./buttons/README.md) - Buttons driver example (`buttons`). Enable the Buttons drivers example
+- **calculator**: [`./calculator/README.md`](./calculator/README.md) - Calculator (`calculator`). Enable the simple LVGL touchscreen calculator example.
+- **calib_udelay**: [`./calib_udelay/README.md`](./calib_udelay/README.md) - Calibration tool for udelay (`calib_udelay`). Note that libm support is also required by this tool.  You may select CONFIG_LIBM to use the NuttX libm if you are not using an external libm.
+- **camera**: [`./camera/README.md`](./camera/README.md) - Camera example (`camera`). Enable the camera example
+- **can**: [`./can/README.md`](./can/README.md) - CAN example (`can`). Enable the CAN example
+- **capture**: [`./capture/README.md`](./capture/README.md) - PWM Capture example (`capture`). Enable the pwm capture example
+- **cbortest**: [`./cbortest/README.md`](./cbortest/README.md) - TinyCBOR Test Example (`cbortest`). Enable the TinyCBOR test example
+- **cctype**: [`./cctype/README.md`](./cctype/README.md) - Verify C++ cctype operations (`cctype`). Enable the a simple test to verify C++ cctype operations.
+- **charger**: [`./charger/README.md`](./charger/README.md) - Battery charger example (`charger`). This application is an example of using charger device.
+- **chat**: [`./chat/README.md`](./chat/README.md) - AT modem chat utility (`chat`). Enable the AT chat utility.
+- **chrono**: [`./chrono/README.md`](./chrono/README.md) - Chronometer example to use with STM32LDiscover (`chrono`). Enable the Chronometer example
+- **comp**: [`./comp/README.md`](./comp/README.md) - Comparator tool (`comp`). Enable support for the comparator tool.
+- **configdata**: [`./configdata/README.md`](./configdata/README.md) - Config Data example / unit test (`configdata`). Enable the Config Data example
+- **cordic**: [`./cordic/README.md`](./cordic/README.md) - CORDIC example (`cordic`). Enable the CORDIC example
+- **cpuhog**: [`./cpuhog/README.md`](./cpuhog/README.md) - CPU hog (`cpuhog`). Enable the cpuhog example
+- **dac**: [`./dac/README.md`](./dac/README.md) - DAC tool (`dac`). Enable support for the DAC tool.
+- **dhcpd**: [`./dhcpd/README.md`](./dhcpd/README.md) - DHCP server example (`dhcpd`). Enable the DHCP server example
+- **dhtxx**: [`./dhtxx/README.md`](./dhtxx/README.md) - Dhtxx sensor example (`dhtxx`). Enable the dhtxx sensor example
+- **discover**: [`./discover/README.md`](./discover/README.md) - UDP Discovery Example (`discover`). Enable the netutils/discover utility.  This example initializes and starts the UDP discover daemon. This daemon is useful for discovering devices in local networks, especially with DHCP configured devices.  It listens for UDP broadcasts which also can include a device class so that groups of devices can be discovered. It is also possible to address all classes with a kind of broadcast discover.
+- **djoystick**: [`./djoystick/README.md`](./djoystick/README.md) - Discrete joystick example (`djoystick`). Enable the discrete joystick example
+- **dronecan**: [`./dronecan/README.md`](./dronecan/README.md) - DroneCAN example (`dronecan`). Enable the LIBDRONECAN example
+- **elf**: [`./elf/README.md`](./elf/README.md) - Intermediate grouping directory for `elf`, organizing submodules: main.
+- **embedlog**: [`./embedlog/README.md`](./embedlog/README.md) - embedlog example (`embedlog`). Enable the "embedlog" example.
+- **esp32_himem**: [`./esp32_himem/README.md`](./esp32_himem/README.md) - ESP32 HIMEM Example (`esp32_himem`). ESP32 HIMEM Example
+- **etl**: [`./etl/README.md`](./etl/README.md) - Embedded Template Library (ETL) C++ example (`etl`). Enable the ETL C++ example which showcases the etl::vector container and C++11 iterator
+- **fb**: [`./fb/README.md`](./fb/README.md) - Framebuffer driver example (`fb`). Enable the Framebuffer driver example.
+- **fbcon**: [`./fbcon/README.md`](./fbcon/README.md) - Framebuffer console example (`fbcon`). Enable the Framebuffer console example. This example allows STDOUT and/or STDERR to be redirected and displayed on a framebuffer character device.
+- **fboverlay**: [`./fboverlay/README.md`](./fboverlay/README.md) - Framebuffer overlay test tool (`fboverlay`). Enable framebuffer overlay test.
+- **fdpicxip**: [`./fdpicxip/README.md`](./fdpicxip/README.md) - FDPIC modules executed in place from xipfs demo (`fdpicxip`). Write FDPIC modules into xipfs at run time, the way a download would, then run them.  Their text is executed directly out of flash and shared between concurrent instances, while each instance gets its own data.
+- **flowc**: [`./flowc/README.md`](./flowc/README.md) - Serial flow control example (`flowc`). Enable the serial hardware flow control test.
+- **fmsynth**: [`./fmsynth/README.md`](./fmsynth/README.md) - FM Synthesizer examples (`fmsynth`). Examples for fmsynth library.
+- **foc**: [`./foc/README.md`](./foc/README.md) - FOC motor controller example (`foc`). Enable the FOC motor controller example. At the moment, this example implements a simple open-loop velocity controller.
+- **ft80x**: [`./ft80x/README.md`](./ft80x/README.md) - FT80x example (`ft80x`). Enable the FT80X example
+- **ftpc**: [`./ftpc/README.md`](./ftpc/README.md) - FTP client example (`ftpc`). Enable the FTP client example
+- **ftpd**: [`./ftpd/README.md`](./ftpd/README.md) - FTP server example (`ftpd`). Enable the FTP server example
+- **fxos8700cq_test**: [`./fxos8700cq_test/README.md`](./fxos8700cq_test/README.md) - FXOS8700CQ motion sensor example (`fxos8700cq_test`). Enable the motion sensor example
+- **gpio**: [`./gpio/README.md`](./gpio/README.md) - GPIO driver example (`gpio`). Enable the GPIO driver example
+- **gps**: [`./gps/README.md`](./gps/README.md) - GPS example (`gps`). Enable the gps test example
+- **hall**: [`./hall/README.md`](./hall/README.md) - Hall effect sensor example (`hall`). Enable the Hall effect sensor example
+- **hdc1008_demo**: [`./hdc1008_demo/README.md`](./hdc1008_demo/README.md) - HDC1008 driver example (`hdc1008_demo`). Enable the example application
+- **hello**: [`./hello/README.md`](./hello/README.md) - "Hello, World!" example (`hello`). Enable the "Hello, World!" example
+- **hello_d**: [`./hello_d/README.md`](./hello_d/README.md) - "Hello, D!" D example (`hello_d`). Enable the "Hello, D!" D example
+- **hello_nim**: [`./hello_nim/README.md`](./hello_nim/README.md) - "Hello, Nim!" example (`hello_nim`). Enable the "Hello, Nim!" example in Nim language
+- **hello_swift**: [`./hello_swift/README.md`](./hello_swift/README.md) - "Hello, Swift!" Swift embedded example (`hello_swift`). Enable the "Hello, Swift!" Swift embedded example
+- **hello_wasm**: [`./hello_wasm/README.md`](./hello_wasm/README.md) - "Hello, WebAssembly!" example (`hello_wasm`). Enable the "Hello, WebAssembly!" example
+- **hello_zig**: [`./hello_zig/README.md`](./hello_zig/README.md) - "Hello, Zig!" example (`hello_zig`). Enable the "Hello, Zig!" example
+- **helloxx**: [`./helloxx/README.md`](./helloxx/README.md) - "Hello, World!" C++ example (`helloxx`). Enable the "Hello, World!" C++ example
+- **hidcombo**: [`./hidcombo/README.md`](./hidcombo/README.md) - USB HID keyboard + mouse combo example (`hidcombo`). Read a USB HID keyboard and a USB HID mouse at the same time from a single task using poll().  Useful to test keyboard + touchpad receivers, which expose both devices on the same USB device.
+- **hidkbd**: [`./hidkbd/README.md`](./hidkbd/README.md) - USB HID keyboard example (`hidkbd`). Enable the USB HID keyboard example
+- **hts221_reader**: [`./hts221_reader/README.md`](./hts221_reader/README.md) - HTS221 reader example (`hts221_reader`). Enable the HTS221 reader example
+- **hx711**: [`./hx711/README.md`](./hx711/README.md) - HX711 driver example (`hx711`). Enable the HX711 example. This program is also useful during development as it's possible to manipulate and dump hx711 settings, as well as print conversions to terminal.
+- **i2schar**: [`./i2schar/README.md`](./i2schar/README.md) - I2S character driver test (`i2schar`). Enable the I2S character driver test
+- **i2sloop**: [`./i2sloop/README.md`](./i2sloop/README.md) - I2S loopback test (`i2sloop`). Enable the I2S loopback test
+- **igmp**: [`./igmp/README.md`](./igmp/README.md) - IGMP example (`igmp`). Enable the IGMP example
+- **ina219**: [`./ina219/README.md`](./ina219/README.md) - INA219 example (`ina219`). Enable the INA219 example
+- **ina226**: [`./ina226/README.md`](./ina226/README.md) - INA226 example (`ina226`). Enable the INA226 example
+- **ini_dumper**: [`./ini_dumper/README.md`](./ini_dumper/README.md) - ini dumper example (`ini_dumper`). Enable ini dumper example program which uses inih
+- **ipcfg**: [`./ipcfg/README.md`](./ipcfg/README.md) - IP Configuration file example (`ipcfg`). Enable the IP Configuration file example
+- **ipforward**: [`./ipforward/README.md`](./ipforward/README.md) - IP forwarding example (`ipforward`). Enable the IP forwarding example
+- **isl29023**: [`./isl29023/README.md`](./isl29023/README.md) - ISL29023 driver example (`isl29023`). Enable the example application
+- **json**: [`./json/README.md`](./json/README.md) - JSON example (`json`). An example for the netutils/json library.
+- **keyboard**: [`./keyboard/README.md`](./keyboard/README.md) - Keyboard example (`keyboard`). Enable the keyboard example
+- **leds**: [`./leds/README.md`](./leds/README.md) - LED driver example (`leds`). Enable the LED driversexample
+- **leds_rust**: [`./leds_rust/README.md`](./leds_rust/README.md) - "LEDs Rust" example (`leds_rust`). Enable the "LEDs Rust" example
+- **leds_zig**: [`./leds_zig/README.md`](./leds_zig/README.md) - "LEDs Zig" example (`leds_zig`). Enable the "LEDs Zig" example
+- **lely_master**: [`./lely_master/README.md`](./lely_master/README.md) - Lely CANopen master example (`lely_master`). Enable the Lely CANopen master (comaster) example application.
+- **lely_slave**: [`./lely_slave/README.md`](./lely_slave/README.md) - Lely CANopen slave example (`lely_slave`). Enable the Lely CANopen slave (coslave) example application.
+- **libtest**: [`./libtest/README.md`](./libtest/README.md) - Static library Example (`libtest`). Enable the static library example
+- **lis3dsh_reader**: [`./lis3dsh_reader/README.md`](./lis3dsh_reader/README.md) - LIS3DSH acceleration reader example (`lis3dsh_reader`). Enable the LIS3DSH reader example
+- **lp503x**: [`./lp503x/README.md`](./lp503x/README.md) - LP503X PWM LED example (`lp503x`). Enable the LP503X example
+- **lsm303_reader**: [`./lsm303_reader/README.md`](./lsm303_reader/README.md) - LSM303 reader example (`lsm303_reader`). Enable the LSM303 reader example
+- **lsm330spi_test**: [`./lsm330spi_test/README.md`](./lsm330spi_test/README.md) - LSM330 SPI test program (`lsm330spi_test`). Enable the LSM330 sensor SPI test program.
+- **lsm6dsl_reader**: [`./lsm6dsl_reader/README.md`](./lsm6dsl_reader/README.md) - LSM6DSL reader example (`lsm6dsl_reader`). Enable the LSM6DSL reader example
+- **ltr308**: [`./ltr308/README.md`](./ltr308/README.md) - LTR308 ambient light sensor example (`ltr308`). Enable the LTR308 example
+- **lua_module**: [`./lua_module/README.md`](./lua_module/README.md) - Lua module example (`lua_module`). Enable the Lua module example
+- **lvgldemo**: [`./lvgldemo/README.md`](./lvgldemo/README.md) - LVGL Demo (`lvgldemo`). Enable build the Light and Versatile Graphics Library Demo programs
+- **lvglterm**: [`./lvglterm/README.md`](./lvglterm/README.md) - LVGL Terminal (`lvglterm`). Enable LVGL Terminal
+- **lvgltouch**: [`./lvgltouch/README.md`](./lvgltouch/README.md) - LVGL touchscreen diagnostic (`lvgltouch`). Show the touchscreen state and coordinates on the display.
+- **lws_echo**: [`./lws_echo/README.md`](./lws_echo/README.md) - libwebsockets WebSocket echo server (`lws_echo`). Simple WebSocket echo server using libwebsockets without TLS.
+- **max31855**: [`./max31855/README.md`](./max31855/README.md) - "max31855" example (`max31855`). Enable the "max31855, World!" example
+- **mcuboot**: [`./mcuboot/README.md`](./mcuboot/README.md) - Intermediate grouping directory for `mcuboot`, organizing submodules: slot_confirm, swap_test, update_agent, update_agent_local.
+- **mdnsd**: [`./mdnsd/README.md`](./mdnsd/README.md) - MDNS daemon example (`mdnsd`). Enable the MDNS daemon example
+- **media**: [`./media/README.md`](./media/README.md) - Media test (`media`). Enable the media test.  This test simply writes values onto the media hidden behind a character driver and verifies that the media can be successfully written and read.  This low level test is useful in the early phases of the bringup of a new block or mtd driver because it avoids the complexity of a file system.
+- **microros_pub**: [`./microros_pub/README.md`](./microros_pub/README.md) - micro-ROS int32 publisher example (`microros_pub`). Minimal micro-ROS publisher that creates a node and publishes an std_msgs/Int32 every second on the topic /nuttx_pub.  Used to validate the NuttX-native transport layer end-to-end with a micro-ROS agent.
+- **microros_sub**: [`./microros_sub/README.md`](./microros_sub/README.md) - micro-ROS int32 subscriber example (`microros_sub`). Minimal micro-ROS subscriber that creates a node, subscribes to the topic /nuttx_sub with std_msgs/Int32, and prints each received value.  Drives an rclc_executor spin loop and is used together with microros_pub (or any external publisher) to validate the NuttX-native transport in the receive direction.
+- **microwindows**: [`./microwindows/README.md`](./microwindows/README.md) - Microwindows example (`microwindows`). Enable the Microwindows example application
+- **mld**: [`./mld/README.md`](./mld/README.md) - MLD example (`mld`). Enable the MLD example
+- **mlx90614**: [`./mlx90614/README.md`](./mlx90614/README.md) - MLX90614 Test Example (`mlx90614`). Enable the MLX90614 example
+- **mml_parser**: [`./mml_parser/README.md`](./mml_parser/README.md) - mml_parser example (`mml_parser`). Enable the mml_parser example
+- **modbus**: [`./modbus/README.md`](./modbus/README.md) - FreeModBus example (`modbus`). Enable the FreeModBus example
+- **modbusmaster**: [`./modbusmaster/README.md`](./modbusmaster/README.md) - Modbus Master example (`modbusmaster`). Enable the Modbus Master example
+- **module**: [`./module/README.md`](./module/README.md) - Intermediate grouping directory for `module`, organizing submodules: chardev, main.
+- **mount**: [`./mount/README.md`](./mount/README.md) - File system mount example (`mount`). Enable the file system mount example
+- **mqttc**: [`./mqttc/README.md`](./mqttc/README.md) - Enable MQTT-C Example (`mqttc`). Enable a simple MQTT-C publisher example
+- **mtdpart**: [`./mtdpart/README.md`](./mtdpart/README.md) - MTD partition test (`mtdpart`). Enable the MTD partition test example.
+- **mtdrwb**: [`./mtdrwb/README.md`](./mtdrwb/README.md) - MTD R/W buffer test (`mtdrwb`). Enable the MTD R/W buffer test example.
+- **nanoxcalc**: [`./nanoxcalc/README.md`](./nanoxcalc/README.md) - Nano-X calculator example (`nanoxcalc`). Enable the Nano-X calculator example application.  It is a port of the nxcalc demo from Microwindows which connects to the Nano-X server started by examples/nanoxterm and shows a calculator keypad operated by the mouse or keyboard.
+- **nanoxterm**: [`./nanoxterm/README.md`](./nanoxterm/README.md) - Nano-X terminal emulator example (`nanoxterm`). Enable the Nano-X terminal emulator example application.  It is a port of the nxterm demo from Microwindows.  It starts the Nano-X server, connects to it and creates a terminal window that runs an NSH shell instance on a pseudo terminal.
+- **netlink_route**: [`./netlink_route/README.md`](./netlink_route/README.md) - Netlink NETLINK_ROUTE test (`netlink_route`). Enable the Netlink NETLINK_ROUTE test
+- **netloop**: [`./netloop/README.md`](./netloop/README.md) - Local loopback example (`netloop`). Enable the local loopback example
+- **netpkt**: [`./netpkt/README.md`](./netpkt/README.md) - Network packet socket example (`netpkt`). Enable the network packet socket example
+- **nettest**: [`./nettest/README.md`](./nettest/README.md) - Network test example (`nettest`). Enable the network test example
+- **nimble**: [`./nimble/README.md`](./nimble/README.md) - NimBLE example (`nimble`). Enable the nimble example
+- **nimble_blecent**: [`./nimble_blecent/README.md`](./nimble_blecent/README.md) - NimBLE central (`nimble_blecent`). Enable the nimble central example
+- **nimble_bleess**: [`./nimble_bleess/README.md`](./nimble_bleess/README.md) - NimBLE Environmental Sensing peripheral (`nimble_bleess`). Enable the NimBLE Environmental Sensing peripheral example.
+- **nimble_bleprph**: [`./nimble_bleprph/README.md`](./nimble_bleprph/README.md) - NimBLE peripheral (`nimble_bleprph`). Enable the nimble peripheral example
+- **nimble_mesh_node**: [`./nimble_mesh_node/README.md`](./nimble_mesh_node/README.md) - NimBLE Mesh Generic OnOff node example (`nimble_mesh_node`). Provisionable NimBLE Mesh node with a Generic OnOff Server.
+- **nimble_mesh_sensor**: [`./nimble_mesh_sensor/README.md`](./nimble_mesh_sensor/README.md) - NimBLE Mesh Sensor Server node example (`nimble_mesh_sensor`). Provisionable NimBLE Mesh node with a Sensor Server model.
+- **nimble_mesh_vendor**: [`./nimble_mesh_vendor/README.md`](./nimble_mesh_vendor/README.md) - NimBLE Mesh vendor model node example (`nimble_mesh_vendor`). Provisionable NimBLE Mesh node with a simple vendor model.
+- **nng_test**: [`./nng_test/README.md`](./nng_test/README.md) - NNG pubsub program (`nng_test`). Enable the NNG pubsub program
+- **noteprintf**: [`./noteprintf/README.md`](./noteprintf/README.md) - "Note printf!" example (`noteprintf`). Enable the "Note printf!" example
+- **nrf24l01_btle**: [`./nrf24l01_btle/README.md`](./nrf24l01_btle/README.md) - Use nRF24L01 emulates a nRF8001 temperature beacon (`nrf24l01_btle`). Emulates a nRF8001 temperature beacon,reads temperature from a DHT11 and sends it via BTLE.Compatible with Nordic Semiconductor apps such as nRF Master Control Panel or nRF Temp 2.0.
+- **nrf24l01_term**: [`./nrf24l01_term/README.md`](./nrf24l01_term/README.md) - Basic nRF24L01 terminal (`nrf24l01_term`).
+- **null**: [`./null/README.md`](./null/README.md) - NULL example (`null`). Enable the NULL example
+- **nunchuck**: [`./nunchuck/README.md`](./nunchuck/README.md) - Nunchuck joystick example (`nunchuck`). Enable the nunchuck joystick example
+- **nx**: [`./nx/README.md`](./nx/README.md) - NX graphics example (`nx`). Enable the NX graphics example
+- **nxdemo**: [`./nxdemo/README.md`](./nxdemo/README.md) - NX Demo "Graphic test" example (`nxdemo`). Enable the NX graphics "Demo Test" example
+- **nxflat**: [`./nxflat/README.md`](./nxflat/README.md) - NXFLAT example (`nxflat`). Enable the NXFLAT example
+- **nxflatxip**: [`./nxflatxip/README.md`](./nxflatxip/README.md) - NXFLAT execute-in-place from xipfs demo (`nxflatxip`). Write an NXFLAT module into xipfs at run time, the way a download would, then run two instances of it concurrently.  The module's text is executed directly out of flash and shared between the instances, while each instance gets its own data.
+- **nxhello**: [`./nxhello/README.md`](./nxhello/README.md) - NX graphics "Hello, World!" example (`nxhello`). Enable the NX graphics "Hello, World!" example
+- **nximage**: [`./nximage/README.md`](./nximage/README.md) - NX graphics image example (`nximage`). Enable the X graphics image example
+- **nxlines**: [`./nxlines/README.md`](./nxlines/README.md) - NX graphics lines example (`nxlines`). Enable the X graphics lines example
+- **nxmbserver**: [`./nxmbserver/README.md`](./nxmbserver/README.md) - NxModbus Server Example (`nxmbserver`). Enable the NxModbus server example. This example demonstrates how to create a Modbus server (slave) that responds to client requests. Supports RTU, ASCII, and TCP transports with simulated register data.
+- **nxscope**: [`./nxscope/README.md`](./nxscope/README.md) - nxscope example (`nxscope`). Enable the nxscope example
+- **nxterm**: [`./nxterm/README.md`](./nxterm/README.md) - NxTerm example (`nxterm`). Enable the NxTerm example
+- **nxtext**: [`./nxtext/README.md`](./nxtext/README.md) - NX graphics text example (`nxtext`). Enable the NX graphics text example
+- **obd2**: [`./obd2/README.md`](./obd2/README.md) - OBD-II application example (`obd2`). Enable the OBD-II application example.
+- **oneshot**: [`./oneshot/README.md`](./oneshot/README.md) - Oneshot timer example (`oneshot`). Enable the oneshot timer driver example
+- **opencyphal**: [`./opencyphal/README.md`](./opencyphal/README.md) - OpenCyphal Cyphal/CAN example (`opencyphal`). Enable the LIBOPENCYPHAL example
+- **optee**: [`./optee/README.md`](./optee/README.md) - OP-TEE client example (`optee`). Enable the OP-TEE client example
+- **optee_gp**: [`./optee_gp/README.md`](./optee_gp/README.md) - OP-TEE GP API client example (`optee_gp`). Enable the OP-TEE GP API client example which uses libteec
+- **pca9635**: [`./pca9635/README.md`](./pca9635/README.md) - PCA9635 PWM LED example (`pca9635`). Enable the PCA9635 example
+- **pdcurses**: [`./pdcurses/README.md`](./pdcurses/README.md) - pdcurses demos (`pdcurses`). Enable build the pdcurses demo programs
+- **pf_ieee802154**: [`./pf_ieee802154/README.md`](./pf_ieee802154/README.md) - PF_IEEE802154 example (`pf_ieee802154`). Enable the PF_IEEE802154 socket example
+- **pffault**: [`./pffault/README.md`](./pffault/README.md) - Page-fault / PMS isolation test (`pffault`). A user-space task that deliberately touches a kernel-space address to exercise the ESP32-S3 PMS isolation boundary and the kernel's recoverable-fault dispatcher.
+- **pipe**: [`./pipe/README.md`](./pipe/README.md) - Pipe example (`pipe`). Enable the pipe example
+- **pmstress**: [`./pmstress/README.md`](./pmstress/README.md) - Power management current staircase (`pmstress`). Walk the power management states in a fixed, timed sequence, so that a logging supply can record the current of each state with nothing attached to the board.  The deepest state comes last and is held until the board is powered off.
+- **poll**: [`./poll/README.md`](./poll/README.md) - Poll example (`poll`). Enable the poll example
+- **popen**: [`./popen/README.md`](./popen/README.md) - popen() example (`popen`). Enable the popen() example
+- **posix_spawn**: [`./posix_spawn/README.md`](./posix_spawn/README.md) - posix_spawn Unit Test (`posix_spawn`). Enable the posix_spawn() unit test
+- **posix_stdio**: [`./posix_stdio/README.md`](./posix_stdio/README.md) - Posix stdio example (`posix_stdio`). Enable POSIX stdio example that shows how to use open(), write() and close() via /dev/console.
+- **powerled**: [`./powerled/README.md`](./powerled/README.md) - Powerled example (`powerled`). Enable the powerled driver example
+- **powermonitor**: [`./powermonitor/README.md`](./powermonitor/README.md) - LTC4151 powermonitor example (`powermonitor`).
+- **pppd**: [`./pppd/README.md`](./pppd/README.md) - pppd client example (`pppd`). Enable the pppd client example
+- **pulsecount**: [`./pulsecount/README.md`](./pulsecount/README.md) - pulsecount example (`pulsecount`). Enable the finite pulsecount example
+- **pwfb**: [`./pwfb/README.md`](./pwfb/README.md) - NX Per-Window Framebuffer Text Example (`pwfb`). Enable the NX per-window framebuffer example
+- **pwlines**: [`./pwlines/README.md`](./pwlines/README.md) - NX Per-Window Framebuffer Graphics Example (`pwlines`). Enable the NX per-window framebuffer example
+- **pwm**: [`./pwm/README.md`](./pwm/README.md) - Pulse width modulation (PWM) example (`pwm`). Enable the Pulse width modulation (PWM) example
+- **qencoder**: [`./qencoder/README.md`](./qencoder/README.md) - Quadrature encoder example (`qencoder`). Enable the quadrature encoder example
+- **random**: [`./random/README.md`](./random/README.md) - /dev/random test (`random`). Enable a simple test of /dev/random
+- **relays**: [`./relays/README.md`](./relays/README.md) - wget JSON Example (`relays`). Enable the wget JSON example
+- **rfid_readuid**: [`./rfid_readuid/README.md`](./rfid_readuid/README.md) - RFID Read UID example (`rfid_readuid`). Enable the RFID READUID example
+- **rgbled**: [`./rgbled/README.md`](./rgbled/README.md) - RGB LED Test (`rgbled`). Enable the RGB LED example
+- **rng90**: [`./rng90/README.md`](./rng90/README.md) - Microchip RNG90 TRNG example (`rng90`). Enable the RNG90 example.  It opens the RNG90 character device, runs the built-in self-test and reads random bytes from it.
+- **romfs**: [`./romfs/README.md`](./romfs/README.md) - ROMFS example (`romfs`). Enable the ROMFS example
+- **rpmsgsocket**: [`./rpmsgsocket/README.md`](./rpmsgsocket/README.md) - Rpmsg socket example (`rpmsgsocket`). Enable the rpmsg socket test example
+- **rust**: [`./rust/README.md`](./rust/README.md) - Intermediate grouping directory for `rust`, organizing submodules: baremetal, hello, slint.
+- **s2opc**: [`./s2opc/README.md`](./s2opc/README.md) - S2OPC OPC UA server example (`s2opc`). Build a small S2OPC server with an anonymous SecurityPolicy None endpoint and an address space generated as C source.
+- **sandbox**: [`./sandbox/README.md`](./sandbox/README.md) - Protected-build sandbox containment test (`sandbox`). A test that deliberately tries to escape the kernel/user boundary of a protected or kernel build, and checks that the attempt is contained: the offending process is terminated and everything else keeps running.
+- **scd41**: [`./scd41/README.md`](./scd41/README.md) - SCD41 CO2 sensor example (`scd41`). Enable the SCD41 CO2 sensor example
+- **scl3300test**: [`./scl3300test/README.md`](./scl3300test/README.md) - SCL3300 inclinometer test program (`scl3300test`). Enable the Murata SCL3300 test program. It checks WHOAMI and the self-test, prints the device info, measures the noise in every operation mode, cycles the power-down policy and resets the device, using the driver's uORB topics and ioctls.
+- **sendmail**: [`./sendmail/README.md`](./sendmail/README.md) - Sendmail example (`sendmail`). Enable the sendmail example
+- **sensor_fusion**: [`./sensor_fusion/README.md`](./sensor_fusion/README.md) - Sensor Fusion Example (`sensor_fusion`). Sensor fusion example that combines gyro and accelerometer data using the Madgwick algorithm to provide yaw, pitch and roll angles.
+- **serialblaster**: [`./serialblaster/README.md`](./serialblaster/README.md) - Serial Blaster example (`serialblaster`). Enable the serial blaster example
+- **serialrx**: [`./serialrx/README.md`](./serialrx/README.md) - Serial RX example (`serialrx`). Enable the serial RX example
+- **serloop**: [`./serloop/README.md`](./serloop/README.md) - Serial loopback example (`serloop`). Enable the serial loopback example
+- **settings**: [`./settings/README.md`](./settings/README.md) - Settings example (`settings`). Enable the "settings" example. This uses the functions provided in system/settings to test the storage and retrieval of various configurable parameters
+- **shm_test**: [`./shm_test/README.md`](./shm_test/README.md) - SHM example (`shm_test`). Enable the SHM example which has an shm producer and consumer
+- **sht3x**: [`./sht3x/README.md`](./sht3x/README.md) - SHT3x sensor example (`sht3x`). Enable the SHT3x sensor example
+- **shv-nxboot-updater**: [`./shv-nxboot-updater/README.md`](./shv-nxboot-updater/README.md) - Silicon Heaven Firmware updates for NXBoot (`shv-nxboot-updater`). Enable the shv-nxboot-updater application.
+- **slcd**: [`./slcd/README.md`](./slcd/README.md) - Segment LCD test (`slcd`). Enables a simple test of an alphanumer, segment LCD
+- **smf**: [`./smf/README.md`](./smf/README.md) - State Machine Framework PSICC2 demo (HSM) (`smf`).
+- **smps**: [`./smps/README.md`](./smps/README.md) - Smps example (`smps`). The default path to the Smps device. Default: /dev/smps0
+- **sotest**: [`./sotest/README.md`](./sotest/README.md) - Intermediate grouping directory for `sotest`, organizing submodules: main, modprint, sotest.
+- **stat**: [`./stat/README.md`](./stat/README.md) - Test of stat(), fstat(), and statfs() (`stat`). Enable the test of stat(), fstat(), and statfs().
+- **stepper**: [`./stepper/README.md`](./stepper/README.md) - Stepper controller test (`stepper`). Enable the stepper controller test
+- **sx127x_demo**: [`./sx127x_demo/README.md`](./sx127x_demo/README.md) - SX127x example (`sx127x_demo`).
+- **system**: [`./system/README.md`](./system/README.md) - System() example (`system`). Enable the system() example
+- **tcp_ipc_client**: [`./tcp_ipc_client/README.md`](./tcp_ipc_client/README.md) - Client for TCP IPC NuttX (`tcp_ipc_client`). Enable the Client for TCP IPC NuttX example
+- **tcp_ipc_server**: [`./tcp_ipc_server/README.md`](./tcp_ipc_server/README.md) - Server for TCP IPC NuttX (`tcp_ipc_server`). Enable the TCP SERVER example
+- **tcpblaster**: [`./tcpblaster/README.md`](./tcpblaster/README.md) - TCP Performance Test (`tcpblaster`). Enable the network test example
+- **tcpecho**: [`./tcpecho/README.md`](./tcpecho/README.md) - Simple TCP echo server (`tcpecho`). Simple single threaded, poll based TCP echo server. This example implements the TCP Echo Server from W. Richard Stevens UNIX Network Programming Book.
+- **telnetd**: [`./telnetd/README.md`](./telnetd/README.md) - Telnet daemon example (`telnetd`). Enable the Telnet daemon example
+- **termios**: [`./termios/README.md`](./termios/README.md) - Termios example (`termios`). Enable the Termios example. This example shows how to change serial parameters like baud rate, stop bits, data length and parity using the termios interface.
+- **thttpd**: [`./thttpd/README.md`](./thttpd/README.md) - THTTPD web server example (`thttpd`). Enable the THTTPD web server example
+- **tiff**: [`./tiff/README.md`](./tiff/README.md) - TIFF file generation example (`tiff`). Enable the TIFF file generation example
+- **timer**: [`./timer/README.md`](./timer/README.md) - Timer example (`timer`). Enable the timer example
+- **timer_gpio**: [`./timer_gpio/README.md`](./timer_gpio/README.md) - Timer GPIO example (`timer_gpio`). Enable the timer-gpio example. This example uses the timer interrupt to periodically change the state of a digital output. The digital output may be a relay, a led or anything else. This example can be very useful to validate timer drivers by using a logic analyzer connected to the digital output. This example differs from the timer example because it waits on a sigwaitinfo() instead of using a signal handler. This approach ensures a deterministic wake-up time when the signal occurs.
+- **tinygl**: [`./tinygl/README.md`](./tinygl/README.md) - TinyGL gears demo (`tinygl`). Render the classic OpenGL "gears" demo with TinyGL on a framebuffer device.  The framebuffer must use the same pixel format as TinyGL (RGB32 or RGB565, see CONFIG_TINYGL_RENDER_BITS_*).
+- **tmp112**: [`./tmp112/README.md`](./tmp112/README.md) - TMP112 temperature sensor example (`tmp112`). Enable the TMP112 example
+- **touchscreen**: [`./touchscreen/README.md`](./touchscreen/README.md) - Touchscreen example (`touchscreen`). Enable the touchscreen example
+- **txmorse**: [`./txmorse/README.md`](./txmorse/README.md) - txmorse (Morse code transmitter) (`txmorse`). Enable the Morse code transmission example.
+- **udgram**: [`./udgram/README.md`](./udgram/README.md) - Unix domain datagram example (`udgram`). Enable the Unix domain SOCK_DGRAM test example
+- **udp**: [`./udp/README.md`](./udp/README.md) - UDP example (`udp`). Enable the UDP example
+- **udpblaster**: [`./udpblaster/README.md`](./udpblaster/README.md) - UDP blaster example (`udpblaster`). Enable the network test example
+- **uid**: [`./uid/README.md`](./uid/README.md) - UID/GID example (`uid`). Enable the UID/GID example
+- **unionfs**: [`./unionfs/README.md`](./unionfs/README.md) - Union file system example (`unionfs`). Enable the Union File System example
+- **usbserial**: [`./usbserial/README.md`](./usbserial/README.md) - USB serial test example (`usbserial`). Enable the USB serial test example
+- **userfs**: [`./userfs/README.md`](./userfs/README.md) - UserFS test (`userfs`). Enables a simple test of the UserFS
+- **usrsocktest**: [`./usrsocktest/README.md`](./usrsocktest/README.md) - USRSOCK test example (`usrsocktest`). Enable the User Socket test example. This example application runs unit-tests for /dev/usrsock.
+- **ustream**: [`./ustream/README.md`](./ustream/README.md) - Unix domain stream example (`ustream`). Enable the Unix domain SOCK_STREAM test example
+- **uvc_cam**: [`./uvc_cam/README.md`](./uvc_cam/README.md) - UVC Camera streaming example (`uvc_cam`). Captures frames from V4L2 camera and streams to USB host via UVC gadget driver (/dev/uvc0).
+- **veml6070**: [`./veml6070/README.md`](./veml6070/README.md) - VEML6070 UltraViolet sensor example (`veml6070`). Enable the VEML6070 example
+- **wamr_module**: [`./wamr_module/README.md`](./wamr_module/README.md) - WAMR module example (`wamr_module`). This example demonstrates how to register a external module into WAMR runtime.
+- **watchdog**: [`./watchdog/README.md`](./watchdog/README.md) - Watchdog Timer example (`watchdog`). Enable the watchdog timer example
+- **watched**: [`./watched/README.md`](./watched/README.md) - Watched example (`watched`). This application works with the watcher example and plays the role of the watched task. This process will create 2 watched tasks. These tasks will subscribe to be watched. One task will feed the dog and the other will starve the dog. So, the watchdog timer will expire and the offending task will be printed.
+- **watcher**: [`./watcher/README.md`](./watcher/README.md) - Watcher example (`watcher`). Enable the watcher example. The watcher is a task that will monitor other tasks that have previously subscribed to be watched. If the watched tasks don't signal the watcher during the watchdog time period, the watchdog timer will expire and the watcher will print the tasks that did not signal and the ones that signaled. This example will only be supported by the chips that supports interrupt on timeout, i.e., which have the "capture" command implemented.
+- **webpanel**: [`./webpanel/README.md`](./webpanel/README.md) - Web Panel for device management (`webpanel`). Enable the Web Panel application, a Tasmota-inspired web interface for NuttX devices. Provides a landing page served via THTTPD from ROMFS, CGI handlers for system info, file management, and a WebSocket-based NSH terminal (powered by libwebsockets).
+- **webserver**: [`./webserver/README.md`](./webserver/README.md) - uIP web server example (`webserver`). Enable the uIP web server example
+- **wget**: [`./wget/README.md`](./wget/README.md) - wget example (`wget`). Enable the wget example
+- **wgetjson**: [`./wgetjson/README.md`](./wgetjson/README.md) - wget JSON Example (`wgetjson`). Enable the wget JSON example
+- **wiegand**: [`./wiegand/README.md`](./wiegand/README.md) - Wiegand example (`wiegand`). Enable the wiegand example
+- **ws2812**: [`./ws2812/README.md`](./ws2812/README.md) - ws2812 Demo Program (`ws2812`). Enable the ws2812 demo
+- **ws2812esp32rmt**: [`./ws2812esp32rmt/README.md`](./ws2812esp32rmt/README.md) - ws2812 Demo Program using ESP32_RMT (`ws2812esp32rmt`). Enable the ws2812 demo, using ESP32 RMT peripheral to generate the pulses
+- **xbc_test**: [`./xbc_test/README.md`](./xbc_test/README.md) - XBox Controller Test example (`xbc_test`). Enable the XBox Controller Test example
+- **xedge_demo**: [`./xedge_demo/README.md`](./xedge_demo/README.md) - Xedge IoT Toolkit Demo (`xedge_demo`). Simple demonstration of the Xedge IoT Toolkit library.
+- **xmlrpc**: [`./xmlrpc/README.md`](./xmlrpc/README.md) - XML RPC example (`xmlrpc`). An example for the netutils/xmlrpc library. This example implements a lightweight HTTP server and uses the xmlrpc lib for parsing xml remote procedure calls.
+- **xrcedds**: [`./xrcedds/README.md`](./xrcedds/README.md) - XRCEDDS publisher demo (`xrcedds`). Build the PublishHelloWorldClient command.  It connects to a Micro XRCE-DDS Agent through the built-in UDP transport and publishes HelloWorld samples.
+- **zbus**: [`./zbus/README.md`](./zbus/README.md) - ZBus example (`zbus`). Enable the zbus message bus example.
+- **zerocross**: [`./zerocross/README.md`](./zerocross/README.md) - Zero Cross Detection example (`zerocross`). Enable the zero cross detection example

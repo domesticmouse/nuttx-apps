@@ -1,0 +1,95 @@
+# `system`
+
+## Overview
+Groups System Libraries and NSH Add-Ons (`system`) components and utilities for NuttX.
+
+## Subdirectories & Boundaries
+- `adb`: [./adb/README.md](./adb/README.md) - Provides ADB daemon application (`system/adb`). Enable support for adb daemon.
+- `adcscope`: [./adcscope/README.md](./adcscope/README.md) - Provides NxScope ADC stream app (`system/adcscope`). Ignored if set to 0 (for example for RTT interface)
+- `batterydump`: [./batterydump/README.md](./batterydump/README.md) - Provides Battery dump system tool (`system/batterydump`). Enable the battery dump
+- `brctl`: [./brctl/README.md](./brctl/README.md) - Provides Ethernet bridge 'brctl' command (`system/brctl`). Enable the 'brctl' command to create Ethernet bridges and to add or remove their ports.
+- `cdcacm`: [./cdcacm/README.md](./cdcacm/README.md) - Provides USB CDC/ACM Device Commands (`system/cdcacm`). Enable the USB CDC/ACM class controls. These controls include:
+- `cfgdata`: [./cfgdata/README.md](./cfgdata/README.md) - Provides Cfgdata Command (`system/cfgdata`). Enable support for the CFGDATA tool.
+- `cle`: [./cle/README.md](./cle/README.md) - Provides EMACS-like Command Line Editor (`system/cle`). Enable support for NuttX tiny EMACS-like command line editor.
+- `composite`: [./composite/README.md](./composite/README.md) - Provides USB Composite Device Commands (`system/composite`). Enable the USB composite class controls. These controls include:
+- `conntrack`: [./conntrack/README.md](./conntrack/README.md) - Provides conntrack command (`system/conntrack`). Enable support for the 'conntrack' command, a simple tool like Linux's 'conntrack', only supports printing NAT connections now.
+- `coredump`: [./coredump/README.md](./coredump/README.md) - Provides Coredump tool capture system status (`system/coredump`). This is the stack size that will be used when starting the coredump.
+- `cpuload`: [./cpuload/README.md](./cpuload/README.md) - Implements cpuload test (`system/cpuload`) for the NuttX application subsystem.
+- `critmon`: [./critmon/README.md](./critmon/README.md) - Provides Critcal Section Monitor (`system/critmon`). If the critical section monitor is enabled (CONFIGSCHED_CRITMONITOR) this option will enable a critical section monitor daemon. This daemon
+- `cu`: [./cu/README.md](./cu/README.md) - Provides CU minimal serial terminal (`system/cu`). Enable the CU serial terminal. This is a minimalistic implementation of the 'cu' terminal program (part of Taylor UUCP for
+- `curl`: [./curl/README.md](./curl/README.md) - Provides curl HTTP command (`system/curl`). Enable the "curl" command: a small command-line HTTP client supporting GET and POST (and other methods via -X), custom
+- `dd`: [./dd/README.md](./dd/README.md) - Provides system 'dd' command (`system/dd`). Enable support for the system 'dd' command.
+- `debugpoint`: [./debugpoint/README.md](./debugpoint/README.md) - Provides Debugpoint utility (`system/debugpoint`). Enable the DEBUGPOINT test program. It is a simple utility for testing the debug point support and
+- `dhcp6c`: [./dhcp6c/README.md](./dhcp6c/README.md) - Provides DHCP IPv6 Address Renewal (`system/dhcp6c`). Enable the DHCP client 'renew6' command
+- `dhcpc`: [./dhcpc/README.md](./dhcpc/README.md) - Provides DHCP Address Renewal (`system/dhcpc`). Enable the DHCP client 'renew' command
+- `dumpstack`: [./dumpstack/README.md](./dumpstack/README.md) - Provides dumpstack tool for show the task backtrace (`system/dumpstack`). This is the stack size that will be used when starting the dumpstack.
+- `expat`: [./expat/README.md](./expat/README.md) - Provides Expat XML parser (`system/expat`). Enable the Expat stream-oriented XML parser. The selected version is downloaded when the applications tree is configured.
+- `fastboot`: [./fastboot/README.md](./fastboot/README.md) - Provides fastbootd (`system/fastboot`). Fastboot daemon supporting multiple transports concurrently. Enable at least one transport (USB, TCP, Serial).
+- `flash_eraseall`: [./flash_eraseall/README.md](./flash_eraseall/README.md) - Provides FLASH Erase-all Command (`system/flash_eraseall`). Enable support for the FLASH eraseall tool.
+- `gcov`: [./gcov/README.md](./gcov/README.md) - Provides gcov tool (`system/gcov`). Enable support for the 'gcov' command.
+- `gdbstub`: [./gdbstub/README.md](./gdbstub/README.md) - Provides GDBSTUB (`system/gdbstub`). Enable support for gdbstub.
+- `gprof`: [./gprof/README.md](./gprof/README.md) - Provides gprof tool (`system/gprof`). Enable support for the 'gprof' command.
+- `grep`: [./grep/README.md](./grep/README.md) - Provides system 'grep' command (`system/grep`). Enable support for the system 'grep' command (regex-based search).
+- `hex2bin`: [./hex2bin/README.md](./hex2bin/README.md) - Provides Intel HEX to binary conversion (`system/hex2bin`). Enable support for a logic to convert Intel HEX format to binary.
+- `hexed`: [./hexed/README.md](./hexed/README.md) - Provides Hex editor (`system/hexed`). Enable support for the hexed command line hexadecial file editor
+- `hostname`: [./hostname/README.md](./hostname/README.md) - Provides 'hostname' command (`system/hostname`). Enable the hostname tool
+- `i2c`: [./i2c/README.md](./i2c/README.md) - Provides I2C tool (`system/i2c`). Enable support for the I2C tool.
+- `iptables`: [./iptables/README.md](./iptables/README.md) - Provides 'iptables' command (`system/iptables`). Enable support for the 'iptables' command.
+- `irtest`: [./irtest/README.md](./irtest/README.md) - Provides IR driver test (`system/irtest`). Enable the IR driver test
+- `kbd`: [./kbd/README.md](./kbd/README.md) - Provides Keyboard dump (`system/kbd`). Dump what a keyboard reports. This reads any keyboard registered with keyboard_register(), whatever the hardware behind it is, so it
+- `lm75`: [./lm75/README.md](./lm75/README.md) - Provides Temperature (`system/lm75`). Enable support for the NSH temp command. This command will read the current temperature from an LM-75 (or compatible) temperature sensor
+- `lsan`: [./lsan/README.md](./lsan/README.md) - Provides lsan memory leak detection (`system/lsan`). Alsans support for the LeakSanitizer (lsan) memory leak detection tool.
+- `lzf`: [./lzf/README.md](./lzf/README.md) - Provides LZF compression tool (`system/lzf`). Enable the LZF compression tool
+- `mdio`: [./mdio/README.md](./mdio/README.md) - Provides PHY Tool (`system/mdio`). Enable the PHY MDIO tool
+- `microros`: [./microros/README.md](./microros/README.md) - Provides micro-ROS Integration (`system/microros`). Enable micro-ROS integration for NuttX RTOS. Provides a ROS 2 client library for embedded and real-time systems.
+- `netdb`: [./netdb/README.md](./netdb/README.md) - Implements netdb interface (`system/netdb`) for the NuttX application subsystem.
+- `nsh`: [./nsh/README.md](./nsh/README.md) - Provides NuttShell (NSH) example (`system/nsh`). Enable the NuttShell (NSH) example
+- `ntpc`: [./ntpc/README.md](./ntpc/README.md) - Provides NTP Daemon Commands (`system/ntpc`). Enable the NTP client example. This example provides a command-line interface to manage the NTP client for time synchronization.
+- `nxcamera`: [./nxcamera/README.md](./nxcamera/README.md) - Provides NxCamera video test application (`system/nxcamera`). Enable support for the NxCam media tester library and optional command line interface.
+- `nxcodec`: [./nxcodec/README.md](./nxcodec/README.md) - Provides NxCodec test application (`system/nxcodec`). This application is a command-line tool that verifies the functionality of NuttX codecs. Specifically, it serves as a verification tool for v4l2m2m.
+- `nxdiag`: [./nxdiag/README.md](./nxdiag/README.md) - Provides System information and diagnostic (nxdiag) (`system/nxdiag`). Enable the nxdiag application to gather and display host and target system information. It can also perform some
+- `nxinit`: [./nxinit/README.md](./nxinit/README.md) - Provides NuttX Init (`system/nxinit`). Enable NxInit(NuttX Init) component for system initialization. The script of NxInit(init.rc) is compatible with the Android Init Language syntax.
+- `nxlooper`: [./nxlooper/README.md](./nxlooper/README.md) - Provides NxLooper audio test application (`system/nxlooper`). Enable support for the NxLoop media tester library and optional command line interface.
+- `nxmbclient`: [./nxmbclient/README.md](./nxmbclient/README.md) - Provides NxModbus Client Tool (`system/nxmbclient`). Enable the NxModbus client command-line tool. This utility allows you to perform Modbus client operations from the command line,
+- `nxpkg`: [./nxpkg/README.md](./nxpkg/README.md) - Provides 'nxpkg' lifecycle helper (`system/nxpkg`). Enable the thin package lifecycle helper proposed for the Dynamic ELF distribution work.
+- `nxplayer`: [./nxplayer/README.md](./nxplayer/README.md) - Provides NxPlayer Media Player (`system/nxplayer`). Enable support for the NxPlayer media player library and optional command line interface.
+- `nxrecorder`: [./nxrecorder/README.md](./nxrecorder/README.md) - Provides NxRecorder pcm raw data Recorder (`system/nxrecorder`). Enable support for the NxRecorder pcm raw data recorder library and optional command line interface.
+- `nxstore`: [./nxstore/README.md](./nxstore/README.md) - Provides Nxstore LVGL App Store (`system/nxstore`). Enable the Nxstore LVGL graphical application store frontend. Lists packages from the local nxpkg repository, installs the
+- `ofloader`: [./ofloader/README.md](./ofloader/README.md) - Provides Open flash loader (`system/ofloader`). Enable support for flashloader.
+- `ping`: [./ping/README.md](./ping/README.md) - Provides ICMP 'ping' command (`system/ping`). Enable support for the ICMP 'ping' command.
+- `ping6`: [./ping6/README.md](./ping6/README.md) - Provides ICMPv6 'ping6' command (`system/ping6`). Enable support for the ICMP 'ping' command.
+- `ptpd`: [./ptpd/README.md](./ptpd/README.md) - Provides PTP daemon commands (`system/ptpd`). Enable 'ptpd' command to start the PTP daemon
+- `readline`: [./readline/README.md](./readline/README.md) - Provides readline() Support (`system/readline`). Enable support for the readline() function.
+- `resmonitor`: [./resmonitor/README.md](./resmonitor/README.md) - Provides enable resource monitor [showinfo] (`system/resmonitor`). Enable resource show with specific duration. Should not use with LOW_RESOURCE_TEST at the same time.
+- `sched_note`: [./sched_note/README.md](./sched_note/README.md) - Provides Scheduler monitor (`system/sched_note`). Enable the schedler instrumentation monitor
+- `sensorscope`: [./sensorscope/README.md](./sensorscope/README.md) - Provides NxScope sensors stream app (`system/sensorscope`). Ignored if set to 0 (for example for RTT interface)
+- `sensortest`: [./sensortest/README.md](./sensortest/README.md) - Provides Sensor driver test (`system/sensortest`). Enable the Sensor driver test
+- `setlogmask`: [./setlogmask/README.md](./setlogmask/README.md) - Provides 'setlogmask' command (`system/setlogmask`). Enable support for 'setlogmask' command used to set syslog level.
+- `settings`: [./settings/README.md](./settings/README.md) - Provides Settings Functions (`system/settings`). The settings storage can be used to store and retrieve various configurable parameters. This storage is a RAM-based map (for fast access)
+- `smf`: [./smf/README.md](./smf/README.md) - Provides (SMF) support (`system/smf`). Enables the State Machine Framework (SMF) for implementing state machines
+- `spi`: [./spi/README.md](./spi/README.md) - Provides SPI tool (`system/spi`). Enable support for the SPI tool.
+- `stackmonitor`: [./stackmonitor/README.md](./stackmonitor/README.md) - Provides Stack Monitor (`system/stackmonitor`). If the stack coloration feature is enabled (STACK_COLORATION) this option will select the Stack Monitor. The stack monitor is a daemon
+- `stty`: [./stty/README.md](./stty/README.md) - Provides stty - set terminal options (`system/stty`). Enable the stty command to configure terminal (TTY) settings. This command allows you to view and change terminal attributes
+- `sudo`: [./sudo/README.md](./sudo/README.md) - Provides sudo (setuid privilege helper) (`system/sudo`). Install a Linux-style setuid-root ``sudo`` program. The kernel raises the effective UID to zero when the ELF is loaded (see
+- `syslogd`: [./syslogd/README.md](./syslogd/README.md) - Provides syslogd utility (`system/syslogd`). Enable support for the 'syslogd' utility. This utility will read syslog messages from the syslog device and transmit them over UDP in RFC 5424
+- `system`: [./system/README.md](./system/README.md) - Provides System Command (`system/system`). Enable support for the system() interface. This will support execution of NSH commands from C code.
+- `taskset`: [./taskset/README.md](./taskset/README.md) - Provides Taskset Command (`system/taskset`). Enable support for the taskset command.
+- `tcpdump`: [./tcpdump/README.md](./tcpdump/README.md) - Provides tcpdump command (`system/tcpdump`). Enable support for the 'tcpdump' command.
+- `tee`: [./tee/README.md](./tee/README.md) - Provides Tee Command (`system/tee`). Enable support for the tee command.
+- `telnet`: [./telnet/README.md](./telnet/README.md) - Provides Telnet chat daemon (`system/telnet`). Enable the Telnet Chat daemon.
+- `telnetd`: [./telnetd/README.md](./telnetd/README.md) - Provides Telnet daemon application (`system/telnetd`). Enable the Telnet daemon application
+- `termcurses`: [./termcurses/README.md](./termcurses/README.md) - Provides Terminal Curses control support (`system/termcurses`). Terminal emulation library for curses support on TTY type consoles such as serial port, CDCACM, telnet, etc.
+- `toybox`: [./toybox/README.md](./toybox/README.md) - Provides Toybox command suite (`system/toybox`). Download, patch and build Toybox (https://landley.net/toybox/), a 0BSD-licensed multi-call binary providing a POSIX/LSB command suite
+- `trace`: [./trace/README.md](./trace/README.md) - Provides Trace command (`system/trace`). Enable support for the trace command.
+- `ubloxmodem`: [./ubloxmodem/README.md](./ubloxmodem/README.md) - Provides u-blox modem configuration tool (`system/ubloxmodem`). Enable the u-blox modem configuration tool.
+- `uniqueid`: [./uniqueid/README.md](./uniqueid/README.md) - Provides 'uniqueid' command (`system/uniqueid`). Enable the uniqueid tool
+- `uorb`: [./uorb/README.md](./uorb/README.md) - Implements uorb(micro object request broker) (`system/uorb`) for the NuttX application subsystem.
+- `usbmsc`: [./usbmsc/README.md](./usbmsc/README.md) - Provides USB Mass Storage Device Commands (`system/usbmsc`). Enable the USB mass storage class controls. These controls include:
+- `vi`: [./vi/README.md](./vi/README.md) - Provides VI Work-Alike Text Editor (`system/vi`). Enable support for NuttX tiny VI work-alike editor.
+- `vncviewer`: [./vncviewer/README.md](./vncviewer/README.md) - Provides VNC Viewer (`system/vncviewer`). Enable the VNC Viewer example application. Connects to a VNC server and displays the remote
+- `wifibridge`: [./wifibridge/README.md](./wifibridge/README.md) - Provides Wi-Fi to Ethernet bridge 'wifibridge' command (`system/wifibridge`). Enable the 'wifibridge' command to start, stop and inspect a Wi-Fi SoftAP bridged to an Ethernet interface.
+- `xipfs`: [./xipfs/README.md](./xipfs/README.md) - Provides xipfs defragmentation command (`system/xipfs`). Enable the 'xipfs' command, which compacts a xipfs volume and reports how its erase blocks are laid out. With -n it only
+- `xrcedds`: [./xrcedds/README.md](./xrcedds/README.md) - Provides eProsima Micro XRCE-DDS (`system/xrcedds`). Enable a lightweight build of Micro XRCE-DDS Client 3.0.1 and Micro-CDR 2.0.2. Only the core client and the built-in UDP
+- `ymodem`: [./ymodem/README.md](./ymodem/README.md) - Provides YMODEM (`system/ymodem`). Enable support for ymodem.
+- `zbus`: [./zbus/README.md](./zbus/README.md) - Provides ZBus message bus library (`system/zbus`). Enable the zbus message bus library (port of the Zephyr zbus). Channels and observers are defined statically with the
+- `zmodem`: [./zmodem/README.md](./zmodem/README.md) - Provides Zmodem Commands (`system/zmodem`). This selection enables the 'sz' and 'rz' NSH commands.

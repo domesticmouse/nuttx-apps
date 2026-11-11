@@ -256,3 +256,60 @@ Regulations, Section 740.13) for both object code and source code.
 The following provides more details on the included cryptographic software:
 https://tls.mbed.org/supported-ssl-ciphersuites.
 https://github.com/intel/tinycrypt
+
+## Overview
+
+The `apps` directory is the Apache NuttX user-space application repository. It provides built-in applications (`builtin`), the NuttShell (`nshlib`) command interpreter, system utilities (`system`), networking protocols and daemons (`netutils`), filesystem tools (`fsutils`), graphics and widget toolkits (`graphics`), industrial control stacks (`industry`), language interpreters and WebAssembly runtimes (`interpreters`), cryptographic libraries (`crypto`), audio/video utilities (`audioutils`, `videoutils`), wireless and LTE stacks (`wireless`, `lte`), machine learning and SDR libraries (`mlearning`, `sdr`), bootloaders (`boot`), benchmarks (`benchmarks`), and reference example applications (`examples`).
+
+## Subdirectories & Boundaries
+
+- `audioutils`: [./audioutils/README.md](./audioutils/README.md) - User-space audio playback helpers (`nxaudio`), Music Macro Language score parsers (`mml_parser`), and software Frequency Modulation synthesizer libraries (`fmsynth`).
+- `benchmarks`: [./benchmarks/README.md](./benchmarks/README.md) - CPU, cache, memory, filesystem, flash, and RTOS latency benchmark applications (`cachespeed`, `cyclictest`, `mtd`, `osperf`, `ramspeed`, `rt-tests`, `sd_bench`, `spinlock_bench`, `tacle-bench`, `whetstone`).
+- `boot`: [./boot/README.md](./boot/README.md) - Bootloader applications and firmware update utilities (`miniboot`, `nxboot`).
+- `builtin`: [./builtin/README.md](./builtin/README.md) - Build-time `.bdat`/`.pdat` registry (`g_builtins`, `g_builtin_count`) and runtime execution engine (`exec_builtin()`) for NuttX built-in applications.
+- `canutils`: [./canutils/README.md](./canutils/README.md) - SocketCAN and character-driver CAN utilities and libraries (`candump`, `canlib`, `cansend`, `libcanutils`, `libobd2`, `slcan`).
+- `crypto`: [./crypto/README.md](./crypto/README.md) - Cryptographic libraries, TLS stacks, and hardware secure element tools (`controlse`, `mbedtls`, `openssl_mbedtls_wrapper`, `wolfssl`).
+- `database`: [./database/README.md](./database/README.md) - Embedded database engines and CLI utilities (`sqlite`).
+- `examples`: [./examples/README.md](./examples/README.md) - User-space reference example applications and demonstration suites for device drivers, networking protocols, filesystems, graphics, IPC, and language runtimes.
+- `fsutils`: [./fsutils/README.md](./fsutils/README.md) - Filesystem formatting libraries (`mkfatfs`, `mksmartfs`, `mkgpt`, `mkmbr`), MTD flash utilities (`flash_eraseall`, `flashtool`), INI/IP configuration parsers (`inifile`, `ipcfg`), and password management (`passwd`).
+- `games`: [./games/README.md](./games/README.md) - Embedded console, LED-matrix, and framebuffer games (`NXDoom`, `brickmatch`, `cgol`, `match4`, `snake`).
+- `graphics`: [./graphics/README.md](./graphics/README.md) - Graphics libraries, window managers, widget toolkits, and display utilities (`ft80x`, `input`, `jpgresizetool`, `nxglyphs`, `nxwidgets`, `nxwm`, `pdcurs34`, `screenshot`, `slcd`, `tiff`, `twm4nx`).
+- `include`: [./include/README.md](./include/README.md) - Shared public C/C++ header interfaces exported across application subsystems (`audioutils`, `builtin`, `canutils`, `fsutils`, `graphics`, `industry`, `interpreters`, `logging`, `lte`, `modbus`, `netutils`, `nshlib`, `nxmodbus`, `platform`, `system`, `wireless`).
+- `industry`: [./industry/README.md](./industry/README.md) - Industrial control, motor control, and protocol stacks (`abnt_codi`, `cnc`, `foc`, `modbus`, `nxmodbus`).
+- `interpreters`: [./interpreters/README.md](./interpreters/README.md) - Embedded scripting language interpreters and WebAssembly runtimes (`bas`, `berry`, `ficl`, `lua`, `minibasic`, `python`, `quickjs`, `toywasm`, `wamr`).
+- `logging`: [./logging/README.md](./logging/README.md) - Real-time telemetry and multi-channel diagnostic logging libraries (`nxscope`).
+- `lte`: [./lte/README.md](./lte/README.md) - LTE modem user-space socket daemons (`alt1250`) and LTE API client libraries (`lapi`).
+- `mlearning`: [./mlearning/README.md](./mlearning/README.md) - Embedded machine learning inference frameworks (`tflite-micro`).
+- `netutils`: [./netutils/README.md](./netutils/README.md) - User-space networking libraries, protocol daemons, and client utilities (`chat`, `cmux`, `codecs`, `dhcp6c`, `dhcpc`, `dhcpd`, `discover`, `dropbear`, `esp8266`, `ftpc`, `ftpd`, `iperf`, `iptables`, `libcoap`, `libcurl4nx`, `libwebsockets`, `mdns`, `netcat`, `netinit`, `netlib`, `ntpclient`, `ping`, `plcatool`, `pppd`, `ptpd`, `rexec`, `rexecd`, `rtptools`, `s2opc`, `smtp`, `telnetc`, `telnetd`, `tftpc`, `thttpd`, `wakeonlan`, `webclient`, `webserver`, `wifibridge`, `xmlrpc`).
+- `nshlib`: [./nshlib/README.md](./nshlib/README.md) - Core NuttShell (NSH) command line parser, session manager, and built-in command dispatcher (`nsh_initialize`, `nsh_consolemain`, `nsh_telnetstart`, `nsh_system`, `nsh_session`, `nsh_parse`, `nsh_command`).
+- `platform`: [./platform/README.md](./platform/README.md) - Build integration point for board-specific user-space platform code (`dummy`, `mikroe-stm32f4`).
+- `sdr`: [./sdr/README.md](./sdr/README.md) - Software-defined radio DSP libraries (`liquid_dsp`).
+- `system`: [./system/README.md](./system/README.md) - System libraries, device diagnostic utilities, and NSH add-on commands (`adb`, `adcscope`, `batterydump`, `brctl`, `cdcacm`, `cfgdata`, `cle`, `composite`, `conntrack`, `coredump`, `cpuload`, `critmon`, `cu`, `curl`, `dd`, `debugpoint`, `dhcp6c`, `dhcpc`, `dumpstack`, `expat`, `fastboot`, `flash_eraseall`, `gcov`, `gdbstub`, `gprof`, `grep`, `hex2bin`, `hexed`, `hostname`, `i2c`, `iptables`, `irtest`, `kbd`, `lm75`, `lsan`, `lzf`, `mdio`, `microros`, `netdb`, `nsh`, `ntpc`, `nxcamera`, `nxcodec`, `nxdiag`, `nxinit`, `nxlooper`, `nxmbclient`, `nxpkg`, `nxplayer`, `nxrecorder`, `nxstore`, `ofloader`, `ping`, `ping6`, `ptpd`, `readline`, `resmonitor`, `sched_note`, `sensorscope`, `sensortest`, `setlogmask`, `settings`, `smf`, `spi`, `stackmonitor`, `stty`, `sudo`, `syslogd`, `system`, `taskset`, `tcpdump`, `tee`, `telnet`, `telnetd`, `termcurses`, `toybox`, `trace`, `ubloxmodem`, `uniqueid`, `uorb`, `usbmsc`, `vi`, `vncviewer`, `wifibridge`, `xipfs`, `xrcedds`, `ymodem`, `zbus`, `zmodem`).
+- `tools`: [./tools/README.md](./tools/README.md) - Host-side build scripts, symbol-table generators (`mksymtab.sh`), Kconfig aggregators (`mkkconfig.sh`), hash verifiers (`check-hash.sh`), ROMFS/import archive scripts (`mkromfsimg.sh`, `mkimport.sh`), and WASI-SDK WebAssembly build rules (`Wasm.mk`, `WASI-SDK.defs`).
+- `videoutils`: [./videoutils/README.md](./videoutils/README.md) - Video encoding and decoding libraries (`openh264`).
+- `wireless`: [./wireless/README.md](./wireless/README.md) - Wireless protocol stacks, Bluetooth tools, IEEE 802.15.4 utilities, LoRa packet forwarders, and Wi-Fi configuration utilities (`bluetooth`, `gs2200m`, `ieee802154`, `iwpan`, `lora_pkt_fwd`, `wapi`).
+
+## Interface
+
+- `[builtin/builtin_list.c:g_builtins]` Built-in application descriptor table (`const struct builtin_s g_builtins[]`) and `[builtin/builtin_list.c:g_builtin_count]` count exported to the kernel and NSH.
+- `[builtin/exec_builtin.c:exec_builtin]` Launches a registered built-in application by name (`int exec_builtin(FAR const char *appname, FAR char * const *argv, FAR const struct spawn_syscall_parms_s *parm)`).
+- `[nshlib/nsh_init.c:nsh_initialize]` Initializes the NuttShell environment, mounts configured filesystems, brings up networking, and runs startup scripts.
+- `[nshlib/nsh_consolemain.c:nsh_consolemain]` Runs the interactive serial/console NSH session loop.
+- `[Application.mk:PROGNAME]` Standard build rules for compiling, registering (`REGISTER`), and archiving user-space applications into `libapps.a`.
+- `[Makefile:libapps.a]` Top-level application library archive (`BIN = libapps$(LIBEXT)`) linked against the NuttX kernel.
+
+## Invariants
+
+- Built-in applications registered via `Application.mk` (`PROGNAME`, `PRIORITY`, `STACKSIZE`, `MAIN`) populate `.bdat`/`.pdat` entries during the `context`/`register` build phase before `builtin_list.c` is compiled `[Application.mk:REGISTER]`.
+- Subdirectories containing both `Makefile` and `Make.defs` are discovered dynamically by `[Directory.mk:SUBDIRS]` and `[Make.defs:CONFIGURED_APPS]` via `.config` Kconfig symbols.
+- When `CONFIG_SCHED_WAITPID=y` is enabled, NSH waits synchronously for foreground built-in commands unless backgrounded with `&` `[nshlib/nsh_builtin.c:nsh_builtin]`.
+
+## Side Effects
+
+- Building `context` executes `[tools/mkkconfig.sh]` to generate `Kconfig` and populates `builtin/registry/` `.bdat`/`.pdat` metadata files.
+- Compiling applications archives object files into `libapps.a` (`$(BIN)`) and installs loadable ELF/NXFLAT/Wasm binaries into `bin/` or ROMFS images (`romfs.img`, `boot_romfsimg.h`) when configured `[Application.mk:install]`.
+
+## Verification
+
+- Run: `make test`
+
