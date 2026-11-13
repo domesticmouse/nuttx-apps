@@ -21,6 +21,7 @@ Implements the core NuttShell (NSH) library (`CONFIG_NSH_LIBRARY`), providing co
 - `[apps/nshlib/nsh_envcmds.c:nsh_getcwd]` / `[apps/nshlib/nsh_envcmds.c:nsh_getfullpath]` / `[apps/nshlib/nsh_envcmds.c:nsh_freefullpath]`: Resolve working directories and full VFS paths.
 - `[apps/nshlib/nsh_fsutils.c:nsh_catfile]` / `[apps/nshlib/nsh_fsutils.c:nsh_readfile]` / `[apps/nshlib/nsh_fsutils.c:nsh_writefile]` / `[apps/nshlib/nsh_fsutils.c:nsh_foreach_direntry]`: Filesystem inspection and manipulation helpers.
 - `[apps/nshlib/nsh_console.h:struct nsh_vtbl_s]`, `[apps/nshlib/nsh_console.h:struct console_stdio_s]`, `[apps/nshlib/nsh.h:struct nsh_parser_s]`, `[apps/nshlib/nsh.h:nsh_cmd_t]`: Core NSH console virtual table and parser state structures.
+- `[apps/nshlib/nsh_syscmds.c:cmd_virtio]`: Dumps VirtIO device and driver status (`virtio dump [type]`) when `CONFIG_DRIVERS_VIRTIO` is enabled.
 
 ## Invariants
 - `[apps/nshlib/nsh.h:CONFIG_NSH_CONSOLE]` or `[apps/nshlib/nsh.h:CONFIG_NSH_TELNET]` must be defined; otherwise compilation fails with `#error "No NSH front end defined"`.

@@ -65,7 +65,7 @@ Groups System Libraries and NSH Add-Ons (`system`) components and utilities for 
 - `sensorscope`: [./sensorscope/README.md](./sensorscope/README.md) - Provides NxScope sensors stream app (`system/sensorscope`). Ignored if set to 0 (for example for RTT interface)
 - `sensortest`: [./sensortest/README.md](./sensortest/README.md) - Provides Sensor driver test (`system/sensortest`). Enable the Sensor driver test
 - `setlogmask`: [./setlogmask/README.md](./setlogmask/README.md) - Provides 'setlogmask' command (`system/setlogmask`). Enable support for 'setlogmask' command used to set syslog level.
-- `settings`: [./settings/README.md](./settings/README.md) - Provides Settings Functions (`system/settings`). The settings storage can be used to store and retrieve various configurable parameters. This storage is a RAM-based map (for fast access)
+- `settings`: [./settings/readme.md](./settings/readme.md) - Provides Settings Functions (`system/settings`). The settings storage can be used to store and retrieve various configurable parameters. This storage is a RAM-based map (for fast access)
 - `smf`: [./smf/README.md](./smf/README.md) - Provides (SMF) support (`system/smf`). Enables the State Machine Framework (SMF) for implementing state machines
 - `spi`: [./spi/README.md](./spi/README.md) - Provides SPI tool (`system/spi`). Enable support for the SPI tool.
 - `stackmonitor`: [./stackmonitor/README.md](./stackmonitor/README.md) - Provides Stack Monitor (`system/stackmonitor`). If the stack coloration feature is enabled (STACK_COLORATION) this option will select the Stack Monitor. The stack monitor is a daemon
